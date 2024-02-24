@@ -6,6 +6,7 @@ html {
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
+  user-select: none;
 }
 
 body, h1, p {
