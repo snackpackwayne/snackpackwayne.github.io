@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
       'Server Administrator',
       'Gamer',
       `${age} y/o`,
-      'Based in Austria',
     ];
 
     let index = 1;
