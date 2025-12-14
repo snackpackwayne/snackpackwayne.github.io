@@ -65,22 +65,4 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     updateSubtitle();
   }, 5000);
-  
-  function createSnowflake() {
-    const snowflake = document.createElement('div');
-    snowflake.className = 'snowflake';
-    snowflake.textContent = '\u2744';
-    
-    const size = Math.random() * 0.8 + 0.6;
-    snowflake.style.fontSize = `${size}rem`;
-    snowflake.style.left = `${Math.random() * 100}vw`;
-    snowflake.style.animationDuration = `${Math.random() * 5 + 6}s`;
-    snowflake.style.setProperty('--drift', `${(Math.random() - 0.5) * 100}px`);
-    
-    document.body.appendChild(snowflake);
-    
-    setTimeout(() => snowflake.remove(), 12000);
-  }
-  
-  setInterval(createSnowflake, 400);
 });
