@@ -4,6 +4,7 @@
   --bg-color: #fafafa;
   --text-color: #1a1a1a;
   --subtitle-color: #666;
+  --snow-color: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,6 +12,7 @@
     --bg-color: #0a0a0a;
     --text-color: #e0e0e0;
     --subtitle-color: #999;
+    --snow-color: #fff;
   }
 }
 
@@ -83,6 +85,23 @@ body {
 
 .icon:hover {
   opacity: 1;
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  pointer-events: none;
+  color: var(--snow-color);
+  font-size: 1em;
+  animation: fall linear forwards;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) translateX(var(--drift));
+    opacity: 0;
+  }
 }
 
 @media (max-width: 600px) {
